@@ -1,0 +1,25 @@
+/?file=Puzzle-SurfAndTurf.txt
+sGridAnswers=.TOOSURFTREFUFO.
+sPuzzleDate=2022-09-16
+sPuzzleName=SurfAndTurf
+sPuzzleTitle=Dinner Anyone?
+iGridWidth=4
+iGridHeight=4
+sGridAnswersPlayer=.--------------.
+sGridStatusPlayer=.NNNNNNNNNNNNNN.
+sGridNumbering=.0123...4...5...
+iClueAnswers=8
+sClues=DummyA|DummyB|Switch Position|Also|Apt name for a worrier|Unfit to be eaten, not Kosher|One might have green filling for St. Pat's Day|Craft for ET
+sAnswers=SURF|TURF|OFF|TOO|STU|TREF|OREO|UFO
+sAnswersPlayer=----|----|---|---|---|----|----|---
+sStatusPlayer=NNNN|NNNN|NNN|NNN|NNN|NNNN|NNNN|NNN
+sSketchiToonsClueItself=Rhyming Restaurant Choice
+sSketchiToonsClueIntro=SketchiToons Clue to Dual Answers
+sSketchiToonsFilename=images/Puzzle-SurfAndTurf.jpg
+sSuccessWindowFilename=images/PuzzleTwistiCross-SurfAndTurf-Solved.jpg
+sDualClueBefore= 
+sDualClueMiddle= and 
+sDualClueEnd=
+sPuzzleCreditAuthor=Puzzle By Sketchi Bill, Images By Sketchi Bill
+sPuzzleCreditDate=September 27, 2022
+
