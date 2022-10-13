@@ -1,0 +1,124 @@
+/* Styles-Settings.css */
+.Settings_BackgroundColor
+{
+  background-color:white;
+}
+
+.Settings_DivBorder
+{
+  border-width:2px;
+  border-style:solid;
+  border-color:black;
+}
+
+.Settings_TableBorder
+{
+  border:0px solid;
+  padding:0px;
+}
+
+.Settings_SubtitleRow
+{
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:normal; 
+  height:15px;
+  font-size: 15px;
+  color:black;
+}
+
+.Settings_CloseBoxRow
+{
+  font-family:Arial, Helvetica, sans-serif;
+  font-style:normal; 
+  font-weight:bold; 
+  text-align:center;
+  font-size: 25px;
+  color:black;
+}
+
+.Settings_CloseBox 
+{
+  font-family:Arial, Helvetica, sans-serif;
+  font-style:normal; 
+  width:60px;
+  height:21px;
+  border:1px solid blue;
+  font-size: 15px;
+  padding-top: 0px;
+  background-color:lightblue;
+}
+
+.Settings_CheckBoxRow
+{
+  font-family:Arial, Helvetica, sans-serif;
+  font-style:normal; 
+  height:15px;
+  text-align: center;
+}
+
+.Settings_CheckBox
+{
+  background-color: white;
+  font-family:Arial, Helvetica, sans-serif;
+  font-style:normal; 
+  font-size: 12px;
+  border:1px;
+  color:blue;
+  width: 15px;
+  height: 20px;
+}
+
+.Settings_CheckBoxRowTitle
+{
+  font-family:Arial, Helvetica, sans-serif;
+  font-style:normal; 
+  text-align:right;
+  font-size: 15px;
+  color:blue;
+}
+
+.Settings_Center
+{
+  text-align: center;
+}
+
+.Settings_Left
+{
+    text-align: left;
+}
+
+.Settings_Right
+{
+    text-align: right;
+}
+
+
+/* css for the Popup itself */
+.Settings_Popup
+{
+  width:100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 10px;
+  color: red;
+}
+
+.Settings_Popup .Settings_Popup_Text 
+{
+  visibility: hidden;
+  width: 90%;
+  text-align: center;
+  border-radius: 1px;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  top:0%;
+  left: 5%;
+  margin-left: 0px;
+}
+
+.Settings_Popup .show 
+{
+  visibility: visible;
+}

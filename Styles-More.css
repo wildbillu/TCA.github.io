@@ -1,0 +1,56 @@
+/* Styles_Dropdown_More.css */
+
+.Dropdown_SpanPadding
+{
+  display: inline-block; 
+  width: 320px;
+}
+
+.Dropdown_More 
+{
+  position: relative; 
+  display: inline-block;
+}
+
+.Dropdown_More_Button
+{
+  border: 0px solid black;
+  padding:2px;
+  text-align:center;
+  font-size: 11px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-style:normal;  
+  color: blue;
+  min-width: 150px;
+  background-color: white;
+}
+.Dropdown_More_Button:hover{background-color: lightblue;}
+
+.Dropdown_More_Button_Disabled
+{
+  border: 0px solid black;
+  padding:2px;
+  text-align:center;
+  font-size: 11px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-style:normal;  
+  color: #666666;
+  min-width: 150px;
+  background-color: #EEEEEE;
+}
+
+.Dropdown_More_Content 
+{
+  border: 1px solid black;
+  position: absolute;
+  color: red;
+  min-width: 150px;
+  display: none;
+  background-color: white;
+  z-index: 1;
+}
+  
+.Dropdown_More_Content:hover {background-color: #C0EFFF}
+    
+.show {display:block;} 
+  

@@ -1,0 +1,158 @@
+<HTML>
+<HEAD>
+    <meta name="viewport" content="height=device-height, width=device=width initial-scale=1.0">
+    <TITLE>Twisti=Cross V2022-10-05A</TITLE>
+    <META name="GENERATOR" content="Absolutely Vocabulous">
+    <link rel="stylesheet" href="Styles-SPF-Keyboard.css">
+    <link rel="stylesheet" href="Styles-SketchiToonsFullWindow.css">
+    <link rel="stylesheet" href="Styles-SmartPhoneFormat-A.css">
+    <link rel="stylesheet" href="Styles-Place.css">
+    <link rel="stylesheet" href="Styles-CAB-Button.css">
+    <link rel="stylesheet" href="Styles-CAB-Headings.css">
+    <link rel="stylesheet" href="Styles-GRB-Button.css">
+    <link rel="stylesheet" href="Styles-SuccessWindow.css">
+    <link rel="stylesheet" href="Styles-SPF-TopRowControl.css">
+    <link rel="stylesheet" href="Styles-Settings.css">
+    <link rel="stylesheet" href="Styles-More.css">
+    <link rel="stylesheet" href="Styles-Info.css">
+    <link rel="stylesheet" href="Styles-Info-Content.css">
+    <SCRIPT SRC="TC-Defines.js"></SCRIPT>
+    <SCRIPT SRC="TC-Defines-SmartPhoneFormat-B.js"></SCRIPT>
+    <SCRIPT SRC="TC-Base.js"></SCRIPT>
+    <SCRIPT SRC="TC-GeneralFunctions.js"></SCRIPT>
+
+    <SCRIPT SRC="TC-CAB-Defines.js"></SCRIPT>
+    <SCRIPT SRC="TC-CAB-Basic.js"></SCRIPT>
+    <SCRIPT SRC="TC-CAB-Setup.js"></SCRIPT>
+    <SCRIPT SRC="TC-CAB-CoreProcessing.js"></SCRIPT>
+    <SCRIPT SRC="TC-CAB-HandleEntries.js"></SCRIPT>
+    <SCRIPT SRC="TC-CAB-ButtonControl.js"></SCRIPT>
+    <SCRIPT SRC="TC-CAB-Helpers-Answers-Status.js"></SCRIPT>
+    <SCRIPT SRC="TC-CA-Place.js"></SCRIPT>
+
+    <SCRIPT SRC="TC-GRB-Defines.js"></SCRIPT>
+    <SCRIPT SRC="TC-GRB-Setup.js"></SCRIPT>
+    <SCRIPT SRC="TC-GRB-CoreProcessing.js"></SCRIPT>
+    <SCRIPT SRC="TC-GRB-ButtonControl.js"></SCRIPT>
+    <SCRIPT SRC="TC-GRB-Basic.js"></SCRIPT>
+    <SCRIPT SRC="TC-GRB-MoveFocus.js"></SCRIPT>
+    <SCRIPT SRC="TC-GRB-HandleEntries.js"></SCRIPT>
+    <SCRIPT SRC="TC-GRB-Helpers-Answers-Status.js"></SCRIPT>
+
+    <SCRIPT SRC="TC-Keyboard.js"></SCRIPT>
+    <SCRIPT SRC="TC-SketchiToonsFullWindow.js"></SCRIPT>
+    <SCRIPT SRC="TC-SuccessWindow.js"></SCRIPT>
+    <SCRIPT SRC="TC-More.js"></SCRIPT>
+    <SCRIPT SRC="TC-Info-Setup.js"></SCRIPT>
+    <SCRIPT SRC="TC-Info-Content.js"></SCRIPT>
+    <SCRIPT SRC="TC-Settings-Setup.js"></SCRIPT>
+    <SCRIPT SRC="TC-Settings-Support.js"></SCRIPT>
+    <SCRIPT SRC="TC-TopRowButton-Setup-Process.js"></SCRIPT>
+    <SCRIPT SRC="test.js"></SCRIPT>
+    <SCRIPT SRC="TC-Cookies.js"></SCRIPT>
+    <SCRIPT SRC="TC-PuzzleFromFile.js"></SCRIPT>
+    <SCRIPT SRC="TC-Status-Process.js"></SCRIPT>
+</HEAD>
+<SCRIPT>
+    var g_iScreen_Width = 800;
+    var g_iScreen_Height= 450;
+function getResolution() 
+{
+    g_iScreen_Width = Math.round(screen.width * window.devicePixelRatio);
+    g_iScreen_Height= Math.round(screen.height * window.devicePixelRatio);
+}
+
+function LoadValues()
+{
+    g_sPuzzleVersion = '&nbsp;&nbsp;&nbsp;V.0.0.007'
+    getResolution(); 
+    var g_bLocal = false;
+    var sPageURL = window.location.search.substring(1);
+    var aPairs = sPageURL.split('&');
+    var iPairs = aPairs.length;
+    if (window.location.protocol === "file:")
+       g_bLocal = true;
+    var sFile = 'Puzzle-Default-A.txt'; // default
+    if ( !g_bLocal )
+    {   
+        if ( iPairs != 0 )
+        {   
+            for ( iPair = 0; iPair < iPairs; iPair++ )
+            {
+                var iFound = aPairs[iPair].indexOf("file=");
+                if ( iFound != -1 )
+                   sFile = aPairs[iPair].substring(iFound+5);
+            }
+        }
+        LoadPuzzleFromFile(sFile);
+    }
+//    HandleCookiesOnStart();
+//  
+    LoadPuzzle();
+    TopRowButtons_Setup();
+    LoadInnerHTML();
+
+    Status_Check();
+    SetInitialSelection();
+    setline('W:' + g_iScreen_Width + " H:" + g_iScreen_Height);
+    g_iBody_Width = Math.round(document.body.getBoundingClientRect().width);
+    g_iBody_Height= Math.round(document.body.getBoundingClientRect().height);
+    setlineAdd(' Body.W:' + g_iBody_Width + " H:" + g_iBody_Height);
+    g_iHTML_Width = Math.round(document.documentElement.getBoundingClientRect().width);
+    g_iHTML_Height= Math.round(document.documentElement.getBoundingClientRect().height);
+    setlineAdd(' HTML.W:' + g_iHTML_Width + " H:" + g_iHTML_Height);
+   
+}
+</SCRIPT>
+
+<BODY Id="All" topmargin="0" leftmargin="0" OnLoad="LoadValues()">
+    <TABLE Id="AllTable" width=450 height=800 BGCOLOR="#FFFFFF" border=0 cellspacing=0 cellspacing=0 padding="0">
+    <TR><TD Id="TCT"    class="NewTitle_S" >TwistiCross with SketchiToons by Sketchi Bill</TD></TR>
+    <TR height=4% width=100%><TD>
+        <TABLE height="100%" width="100%" padding="0" cellspacing="0">
+            <TR height="100%">
+                <TD width="5%" class="TopRowControlClass_StatusIndicators_S" bgcolor=#FFFFFF>Progress&nbsp&nbsp</TD>
+                <TD width="30%" class="TopRowControlClass_StatusIndicators"><div Id='Status_GR' class="TopRowControlClass_StatusIndicators_DivForBorder">0 of 8</div></TD>
+                <TD width="30%" class="TopRowControlClass_StatusIndicators"><div Id='Status_CA' class="TopRowControlClass_StatusIndicators_DivForBorder">0 0f 8</div></TD>
+                <TD Id="TopRowControl" class="TopRowControlClass">This Row for Controls</TD>
+            </TR>
+        </TABLE>
+    </TD></TR>
+    <TR><TD Id="PT"     class="NewTitle">PuzzleTitle</TD></TR>
+    <TR><TD bgcolor="#FFFFFF" Id="Popup_SketchiToonsFull" height=0 align=center></TD></TR>
+    <TR><TD bgcolor="#FFFFFF" Id="Popup_Button_Settings" height=0 align=center></TD></TR>
+    <TR><TD bgcolor="#FFFFFF" Id="Popup_Button_More" height=0 align=left></TD></TR>
+    <TR><TD bgcolor="#FFFFFF" Id="Popup_SuccessWindow" height=0 align=center></TD></TR>
+    <TR ><TD>
+        <TABLE border=0 cellspacing=0 width="100%">
+            <TR>
+                <TD width=250px>
+                    <DIV class="GRB_Div" Id="GRB_Div0">aa</DIV>
+                    <DIV class="GRB_Div" Id="GRB_Div1">aa</DIV>
+                    <DIV class="GRB_Div" Id="GRB_Div2">aa</DIV>
+                    <DIV class="GRB_Div" Id="GRB_Div3">aa</DIV>
+                    <DIV class="GRB_Div" Id="GRB_Div4">aa</DIV>
+                    <DIV Id="Place_Popup" height=0 align=center></DIV>'
+                </TD>
+                <TD width=50% Id="TwistiCrossImage"></TD>
+            </TR>
+        </TABLE>
+    </TD></TR>	
+    <TR><TD Id="CA01CI" align=center class="CAB_Row_DualClue_S CA_Color_InActive" >Intro</TD></TR>
+    <TR><TD Id="CA01C"  align=center class="CAB_Row_DualClue CA_Color_InActive" >ClueItself</TD></TR>    
+    <TR Id="CA_01_R" align=center  class="CAB_Row_DualClue CA_Color_InActive" width="100%"><TD align="center" Id="CA_01">IIIIII</TD></TR>   
+    <TR Id="CA_2_R" class="CAB_Row_Base">         <TD><TABLE align="right"><TR><TD Id="CA_2_C" class="CAB_Clue_Text">CLUE</TD><TD Id="CA_2_A">ANSWER</TD><TD Id="CA_2_Place">PLACE</TD></TR></TABLE></TD></TR>
+    <TR Id="CA_3_R" class="CAB_Row_Base" height=0><TD><TABLE align="right"><TR><TD Id="CA_3_C" class="CAB_Clue_Text">Clue</TD><TD Id="CA_3_A">ANSWER</TD><TD Id="CA_3_Place"></TD></TR></TABLE></TD></TR>
+    <TR Id="CA_4_R" class="CAB_Row_Base" height=0><TD><TABLE align="right"><TR><TD Id="CA_4_C" class="CAB_Clue_Text">Clue</TD><TD Id="CA_4_A">ANSWER</TD><TD Id="CA_4_Place"></TD></TR></TABLE></TD></TR>
+    <TR Id="CA_5_R" class="CAB_Row_Base" height=0><TD><TABLE align="right"><TR><TD Id="CA_5_C" class="CAB_Clue_Text">Clue</TD><TD Id="CA_5_A">ANSWER</TD><TD Id="CA_5_Place"></TD></TR></TABLE></TD></TR>
+    <TR Id="CA_6_R" class="CAB_Row_Base" height=0><TD><TABLE align="right"><TR><TD Id="CA_6_C" class="CAB_Clue_Text">Clue</TD><TD Id="CA_6_A">ANSWER</TD><TD Id="CA_6_Place"></TD></TR></TABLE></TD></TR>
+    <TR Id="CA_7_R" class="CAB_Row_Base" height=0><TD><TABLE align="right"><TR><TD Id="CA_7_C" class="CAB_Clue_Text">Clue</TD><TD Id="CA_7_A">ANSWER</TD><TD Id="CA_7_Place"></TD></TR></TABLE></TD></TR>
+    <TR Id="CA_8_R" class="CAB_Row_Base" height=0><TD><TABLE align="right"><TR><TD Id="CA_8_C" class="CAB_Clue_Text"></TD><TD Id="CA_8_A"></TD><TD Id="CA_8_Place"></TD></TR></TABLE></TD></TR>
+    <TR Id="CA_9_R" class="CAB_Row_Base" height=0><TD><TABLE align="right"><TR><TD Id="CA_9_C" class="CAB_Clue_Text"></TD><TD Id="CA_9_A"></TD><TD Id="CA_9_Place"></TD></TR></TABLE></TD></TR>
+    <TR width=100%><TD Id="CA_2ToN"></TD></TR>
+    <TR class="KB_Area"><TD id=KB name=KB>notset</TD></TR>
+    <TR><TD Id="Popup_Button_Info" height=0 align=center></TD></TR>
+    <TR height=10 align="bottom"><TD id="Messages">Messages</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

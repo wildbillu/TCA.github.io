@@ -1,0 +1,174 @@
+/* Styles-Place.css */
+
+.Place_Button_Disabled
+{
+  width:40px;
+  height:21px;
+  border:1px solid black;
+  font-size: 15px;
+  color: #666666;
+  padding: 0px;
+  background-color:#EEEEEE;
+}
+
+.Place_Button
+{
+  width:40px;
+  color: black;
+  height:21px;
+  border:1px solid black;
+  font-size: 15px;
+  padding: 0px;
+  background-color:white;
+}
+
+.Place_Across_Row_Controls
+{
+  width:50%;
+  vertical-align:top;
+  border:0px solid green;
+}
+
+.Place_Down_Row_Controls
+{
+  width:50%;
+  vertical-align: top;
+  border:0px solid orange;
+  align-items:center;
+}
+
+.Place_Content_Common_Multiline
+{
+    resize: none;
+    padding: 0px;
+    width: 80%;
+    border: 0px;
+    border-collapse: collapse;    
+    outline: none;    
+    text-align: center;
+    font-size: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:bold;
+    color:black;
+}
+
+.Place_Content_Common_Multiline::selection 
+{  
+    background: antiquewhite;
+    color: black;
+}
+
+.Place_BackgroundColor
+{
+  background-color:lightblue;
+}
+
+.Place_DivBorder
+{
+  border-width:2px;
+  border-style:solid;
+  border-color:black;
+}
+
+.Place_TableBorder
+{
+  border:0px solid;
+  border-color:red;
+  padding:0px;
+}
+
+.Place_SubtitleRow
+{
+  height:15px;
+  font-size: 15px;
+  color:green;
+}
+
+.Place_SetBox_Across
+{
+  width:100px;
+  height:21px;
+  border:1px solid blue;
+  font-size: 15px;
+  padding-top: px;
+  background-color:lightblue;
+}
+
+.Place_SetBox_Down
+{
+  width:21px;
+  height:101px;
+  border:1px solid blue;
+  font-size: 15px;
+  padding-top: px;
+  background-color:lightblue;
+}
+
+.Place_CloseBox 
+{
+  width:60px;
+  height:21px;
+  border:1px solid blue;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;  
+  font-size: 15px;
+  padding-top: 0px;
+  background-color:lightblue;
+}
+
+.Place_Word
+{
+  width:60px;
+  height:21px;
+  border:0px solid blue;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;  
+  font-size: 20px;
+  padding-top: 0px;
+  color: blue;
+  background-color:lightblue;
+}
+
+.Place_Center
+{
+  text-align: center;
+}
+
+.Place_Left
+{
+    text-align: left;
+}
+
+.Place_Right
+{
+    text-align: right;
+}
+
+.Place_Popup
+{
+  width:100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 10px;
+  color: red;
+}
+
+.Place_Popup .Place_Popup_Text 
+{
+  visibility: hidden;
+  width: 200%;
+  text-align: center;
+  border-radius: 1px;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  top:0%;
+  left: 5%;
+  margin-left: 0px;
+}
+
+.Place_Popup .show 
+{
+  visibility: visible;
+}

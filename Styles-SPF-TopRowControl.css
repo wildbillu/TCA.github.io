@@ -1,0 +1,113 @@
+/* Styles-SPF-TopRowControl.css */
+.NewTitle
+{
+    text-align: center;
+    padding: 0px;
+    border: 0px;
+    color:red;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:normal;
+    font-size:20px;
+    background-color:white;
+}
+
+.NewTitle_S
+{
+    text-align: center;
+    padding: 0px;
+    border: 0px;
+    color:blue;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:normal;
+    font-size:16px;
+    background-color:white;
+}
+
+.CAB_Row_DualClue
+{
+    padding: 0px;
+    height: 2%;
+    width: 100%;
+    border: 0px;
+    border-collapse: collapse;    
+    outline: none;    
+    text-align: center;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:normal;
+}
+
+.CAB_Row_DualClue_S
+{
+    padding: 0px;
+    height: 2%;
+    width: 100%;
+    border: 0px;
+    border-collapse: collapse;    
+    outline: none;    
+    text-align: center;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:normal;
+}
+
+.TopRowControlClass_StatusIndicators
+{
+    text-align: center;
+    height: 3%;
+    padding: 0px;
+    border: 0px;
+    color:blue;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:normal;
+    font-size:20px;
+    background-color:aliceblue;
+}
+
+.TopRowControlClass_StatusIndicators_S
+{
+    text-align: center;
+    height: 3%;
+    padding: 0px;
+    border: 0px;
+    color:blue;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:normal;
+    font-size:14px;
+    background-color:aliceblue;
+}
+.TopRowControlClass_StatusIndicators_DivForBorder
+{
+    height:30px;
+    border-width:1px;
+    border-style:solid;
+    border-color:black;
+}
+
+.TopRowControlClass
+{
+    padding: 0px;
+    height: 3%;
+    width: 100%;
+    border: 0px;
+    outline: none;    
+    text-align: right;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:normal;
+    background-color:aliceblue;
+    caret-color: aliceblue;
+    color:black;
+}
+
+.TopRowControl_Button
+{
+    border: 0px;
+    background-color:aliceblue;
+    padding: 0px;
+    height: 32px;
+    width:32px;
+    outline: none;
+    caret-color: transparent;
+    color:black;
+}
+
